@@ -1,0 +1,168 @@
+[
+    {
+      "product_id": 1,
+      "product_title": "Dell XPS 13",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/dell/xps-13-plus-9320/xps-13-plus-9320-01-228x228.webp",
+      "category": "laptops",
+      "price": 1200,
+      "description": "Dell XPS 13 with Intel i7 processor, 16GB RAM, 512GB SSD.",
+      "Specification": ["13.3-inch display", "Intel Core i7", "16GB RAM", "512GB SSD"],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 2,
+      "product_title": "ASUS VivoBook 15",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/asus/vivobook-15-x1502za/vivobook-15-x1502za-01-228x228.webp",
+      "category": "laptops",
+      "price": 999,
+      "description": "ASUS VivoBook 15 with A16 Bionic chip and triple-camera system.",
+      "Specification": ["6.1-inch display", "A16 Bionic chip", "128GB storage", "5G support"],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": 3,
+      "product_title": "Apple Watch Series 8",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/smart-watch/apple/series-8/apple-watch-series-8-01-228x228.webp",
+      "category": "smartwatches",
+      "price": 399,
+      "description": "Apple Watch Series 8 with health tracking and ECG features.",
+      "Specification": ["ECG", "Heart rate monitor", "Water-resistant", "GPS"],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 4,
+      "product_title": "MacBook Air M2",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/apple/macbook-air-m2-chip/macbook-air-m2-chip-01-228x228.webp",
+      "category": "macbook",
+      "price": 1099,
+      "description": "MacBook Air with M2 chip, 8GB RAM, and 256GB SSD.",
+      "Specification": ["13.6-inch display", "M2 chip", "8GB RAM", "256GB SSD"],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 5,
+      "product_title": "Samsung Galaxy S22 Ultra",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/mobile/samsung/galaxy-s22-ultra/galaxy-s22-ultra-green--228x228.webp",
+      "category": "phones",
+      "price": 1199,
+      "description": "Samsung Galaxy S22 Ultra with S-Pen and 108MP camera.",
+      "Specification": ["6.8-inch display", "108MP camera", "5G", "S-Pen"],
+      "availability": false,
+      "rating": 4.5
+    },
+    {
+      "product_id": 6,
+      "product_title": "Sony WH-1000XM5",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/headphone/sony/wh-1000xm5/wh-1000xm5-02-228x228.webp",
+      "category": "accessories",
+      "price": 399,
+      "description": "Noise-canceling over-ear headphones with 30-hour battery life.",
+      "Specification": ["Active noise canceling", "30-hour battery", "Bluetooth", "Quick charge"],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 7,
+      "product_title": "HP Spectre x360",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/14-e2027tu/14-e2027tu-01-228x228.webp",
+      "category": "laptops",
+      "price": 1399,
+      "description": "HP Spectre x360 convertible laptop with Intel i7, 16GB RAM, and 512GB SSD.",
+      "Specification": ["13.5-inch touchscreen", "Intel Core i7", "16GB RAM", "512GB SSD"],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 8,
+      "product_title": "Apple AirPods Pro",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/earbuds/apple/airpods-pro-2nd-generation/airpods-pro-2nd-generation-06-228x228.webp",
+      "category": "accessories",
+      "price": 249,
+      "description": "Apple AirPods Pro with active noise cancellation and spatial audio.",
+      "Specification": ["Active noise canceling", "Spatial audio", "Bluetooth", "Wireless charging"],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 9,
+      "product_title": "Lenovo ThinkPad X1 Carbon",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/thinkpad-x1-carbon-g11/thinkpad-x1-carbon-g11-01-228x228.webp",
+      "category": "laptops",
+      "price": 1600,
+      "description": "Lenovo ThinkPad X1 Carbon with Intel i7, 16GB RAM, 512GB SSD.",
+      "Specification": ["14-inch display", "Intel Core i7", "16GB RAM", "512GB SSD"],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 10,
+      "product_title": "Acer Aspire 3",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/acer/aspire-3-a315-59-332b/aspire-3-a315-59-332b-01-228x228.webp",
+      "category": "laptops",
+      "price": 799,
+      "description": "Acer Aspire 3 with A15 Bionic chip and dual-camera system.",
+      "Specification": ["6.1-inch display", "A15 Bionic chip", "128GB storage", "5G support"],
+      "availability": false,
+      "rating": 4.7
+    },
+    {
+      "product_id": 11,
+      "product_title": "Samsung Galaxy Watch 5",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/smart-watch/samsung/galaxy-watch5-44mm/galaxy-watch5-44mm-01-228x228.webp",
+      "category": "smartwatches",
+      "price": 279,
+      "description": "Samsung Galaxy Watch 5 with health monitoring and GPS.",
+      "Specification": ["Heart rate monitor", "Sleep tracking", "GPS", "Water-resistant"],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": 12,
+      "product_title": "Asus ROG Zephyrus G14",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/asus/rog-zephyrus-g14-ga403uv/rog-zephyrus-g14-ga403uv-01-228x228.webp",
+      "category": "laptops",
+      "price": 1500,
+      "description": "Gaming laptop with AMD Ryzen 9, 16GB RAM, and 1TB SSD.",
+      "Specification": ["14-inch display", "AMD Ryzen 9", "16GB RAM", "1TB SSD"],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": 13,
+      "product_title": "MacBook Pro 16-inch",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/apple/macbook-pro-16-inch-m3-pro-black/macbook-pro-16-inch-m3-pro-black-01-228x228.webp",
+      "category": "macbook",
+      "price": 2499,
+      "description": "MacBook Pro with M1 Max chip, 32GB RAM, and 1TB SSD.",
+      "Specification": ["16-inch display", "M1 Max chip", "32GB RAM", "1TB SSD"],
+      "availability": false,
+      "rating": 4.9
+    },
+    {
+      "product_id": 14,
+      "product_title": "Samsung Galaxy Z Fold 5",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/mobile/samsung/galaxy-z-fold-5/galaxy-z-fold-5-phantom-black-official-228x228.webp",
+      "category": "phones",
+      "price": 599,
+      "description": "Samsung Galaxy Z Fold 5 with Tensor G2 chip and advanced camera features.",
+      "Specification": ["6.3-inch display", "Tensor G2 chip", "128GB storage", "5G support"],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 15,
+      "product_title": "Apple MagSafe Charger",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/charger/apple/magsafe/magsafe-01-228x228.jpg",
+      "category": "accessories",
+      "price": 39,
+      "description": "Apple MagSafe charger with magnetic alignment for iPhone.",
+      "Specification": ["Magnetic alignment", "Wireless charging", "Fast charge", "Compatible with iPhone"],
+      "availability": true,
+      "rating": 4.3
+    }
+  ]
+  
