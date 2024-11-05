@@ -1,70 +1,84 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import DetailsTem from "../DetailsTem";
-import { addCartToLs, addWishtToLs } from "../Utilities/addToDB";
-import wish from '../../assets/assets/wish.png'
-
-
+import DetailsTitle from "../DetailsTitle";
+import { addCart, addWish, getStoredWish } from "../Utilities/addToDB";
+import { useEffect, useState } from "react";
+import { FaRegHeart } from "react-icons/fa";
 
 const GadgetsDetails = () => {
     const gadgetId = useParams()
     const data = useLoaderData()
 
-
     const id = parseInt(gadgetId.GId)
+    const [isWished, setWished] = useState(false)
+    const [products, setProduct] = useState([])
 
+    useEffect(() => {
+        const details = [...data].find(gadget => gadget.product_id === id)
+        setProduct(details)
+        const wish = getStoredWish()
+        const isExist = wish.find(item => item.product_id === details.product_id)
+        if (isExist) {
+            setWished(true)
+        }
+    }, [data, id])
+    console.log(products);
 
-    const details = [...data].find(gadget => gadget.product_id === id)
-    const { product_image, product_title, product_id, price, availability, description, specification, rating } = details
+    const { product_image, product_title, product_id, price, availability, description, Specification = [], rating } = products;
 
     const handleWish = (wishGadget) => {
-        addWishtToLs(wishGadget)
-        console.log('clicked');
-
+        addWish(wishGadget);
+        setWished(true);
     }
-    const handleCart = (gadget) => {
-        addCartToLs(gadget)
 
-    }
+    const handleCart = (gadgets) => {
+        addCart(gadgets)
+    };
+
     return (
         <div>
-            <DetailsTem title='Product Details' subtitle='Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'></DetailsTem>
-            <div className="border-2 m-3 max-w-[800px]  mx-auto relative bottom-32 p-3 rounded-lg border-white">
-                <div className=" bg-white shadow-lg   ">
+            <DetailsTitle title='Product Details' subtitle='Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'></DetailsTitle>
+
+            <div className="border-2 m-3 max-w-[800px] mx-auto relative bottom-32 p-3 rounded-[24px] border-white">
+
+                <div className="bg-white shadow-lg rounded-[24px]">
+
                     <div className="hero-content flex-col lg:flex-row">
-                        <img
-                            src={product_image}
-                            className="max-w-sm rounded-lg shadow-2xl" />
+                        <img src={product_image} className="max-w-sm rounded-[24px] shadow-2xl" />
+
                         <div>
                             <h1 className="text-2xl font-bold">{product_title}</h1>
-                            <p className="py-1"> Price: $
-                                {price}
-                            </p>
-                            <button className="btn btn-outline btn-sm rounded-2xl btn-primary">{availability ? 'In stock' : 'Stock Out'}</button>
+                            <p className="py-1"> Price:${price}</p>
+                            <button className="btn btn-outline btn-sm rounded-2xl text-lime-500">{availability ? 'In Stock' : 'Stock Out'}</button>
                             <p>{description}</p>
-                            <div>
-                                <h2 className="font-bold text-xl">
-                                    Specification:
-                                </h2>
-                                {
-                                    specification.map(specif => <p>{specif}</p>)
-                                }
 
+                            <div>
+                                <h2 className="font-bold text-xl">Specification: </h2>
+                                {
+                                    Specification.map((specif, idx) => <p key={idx}>{specif}</p>)
+                                }
                             </div>
+
                             <h2>Rating</h2>
                             <div className="rating">
-                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-500" />
+
                                 <input
                                     type="radio"
                                     name="rating-2"
-                                    className="mask mask-star-2 bg-orange-400"
+                                    className="mask mask-star-2 bg-orange-500"
                                     defaultChecked />
-                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-500" />
+
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-500" />
+
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-500" />
+
                                 <h1>{rating}</h1>
                             </div>
                             <div className="flex items-center gap-4">
-                                <button onClick={() => handleCart(details)} className="btn bg-[#9538E2] w-44 rounded-3xl text-white font-bold">Add To Cart  <svg
+                                <button onClick={() => handleCart(products)} className="btn bg-purple-700 w-44 rounded-3xl text-white font-bold">Add To Cart<svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 text-white"
                                     fill="none"
@@ -77,9 +91,13 @@ const GadgetsDetails = () => {
                                         d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                                 </svg>
                                 </button>
-                                <button onClick={() => handleWish(details)}>
-                                    <img src={wish} alt="" />
+
+                                <button disabled={isWished}
+                                    onClick={() => handleWish(products)}
+                                    className="btn text-black rounded-full text-xl">
+                                    <FaRegHeart />
                                 </button>
+
                             </div>
                         </div>
 

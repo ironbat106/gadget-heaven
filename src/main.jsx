@@ -12,7 +12,8 @@ import GadgetsCategory from './components/Gadgets/GadgetsCategory';
 import Statistics from './components/Statistics';
 import Dashboard from './components/Dashboard';
 import GadgetsDetails from './components/Gadgets/GadgetsDetails';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -57,5 +58,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </StrictMode>,
 )
