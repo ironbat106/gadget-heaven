@@ -6,11 +6,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './components/Root';
-
 import Home from './components/Home';
 import GadgetsCategory from './components/Gadgets/GadgetsCategory';
 import Statistics from './components/Statistics';
 import Dashboard from './components/Dashboard';
+import Support from './components/Support';
 import GadgetsDetails from './components/Gadgets/GadgetsDetails';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -44,6 +44,11 @@ const router = createBrowserRouter([
       {
         path:'/dashboard',
         element:<Dashboard></Dashboard>
+
+      },
+      {
+        path:'/support',
+        element:<Support></Support>
 
       },
       {

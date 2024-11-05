@@ -35,6 +35,14 @@ const Navbar = () => {
                     Dashboard
                 </NavLink>
             </li>
+            <li>
+                <NavLink
+                    to='/support'
+                    className={({ isActive }) =>
+                        isActive ? 'bg-white text-purple-700 focus:outline-none hover:bg-transparent' : 'text-gray-800 focus:outline-none hover:bg-transparent'}>
+                    Support
+                </NavLink>
+            </li>
         </>
 
     const [cartProducts, setCartProduct] = useState([])
