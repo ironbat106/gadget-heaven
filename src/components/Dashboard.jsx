@@ -9,7 +9,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         document.title = 'Dashboard - Gadget Heaven';
-    },[]);
+    }, []);
 
     const [cartProducts, setProduct] = useState([])
     useEffect(() => {
@@ -27,7 +27,8 @@ const Dashboard = () => {
     const handleTogging = (active) => {
         if (active) {
             setActive(true)
-        } else {
+        }
+        else {
             setActive(false)
         }
     }
@@ -115,6 +116,7 @@ const Dashboard = () => {
             </div>
 
             <div className='flex flex-col md:flex-row justify-between items-center py-6 w-10/12 mx-auto'>
+
                 <div>
                     <h1 className='text-lg font-bold'>{`${isActive ? "Cart" : "Wish"}`}</h1>
                 </div>
@@ -130,10 +132,11 @@ const Dashboard = () => {
 
                     <button
                         onClick={openModal}
-                        disabled = {cartProducts.length === 0}
+                        disabled={cartProducts.length === 0}
                         className={`btn bg-purple-700 text-white rounded-3xl px-6 ${cartProducts.length === 0 ? 'bg-gray-200 text-gray-600 cursor-not-allowed' : 'bg-purple-700 text-white'}`}>
                         Purchase
                     </button>
+
                 </div>
             </div>
             <div>
@@ -162,14 +165,14 @@ const Dashboard = () => {
                     <p>Thanks for Purchasing</p>
                     <p>Total: {`${isActive ? priceCart : wishPrice}`}K</p>
 
-                    <div className=" ">
+                    <div>
                         <form method="dialog ">
                             <Link to='/'><button onClick={() =>
                                 handleModalClose(isActive)}
                                 className="btn flex w-2/3 mx-auto rounded-3xl font-bold">Close</button></Link>
                         </form>
-
                     </div>
+
                 </div>
             </dialog>
 

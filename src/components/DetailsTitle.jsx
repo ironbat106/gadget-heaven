@@ -1,6 +1,7 @@
 import React from 'react';
 
 const DetailsTitle = ({ title, subtitle }) => {
+    
     return (
         <div className="hero bg-purple-700 pb-20 text-white">
 

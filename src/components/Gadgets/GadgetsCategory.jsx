@@ -19,9 +19,8 @@ const GadgetsCategory = () => {
             else {
                 setGadget(categoryGadgets);
             }
-        } 
-        else 
-        {
+        }
+        else {
             setGadget(data);
         }
 
@@ -31,11 +30,11 @@ const GadgetsCategory = () => {
         <>
             <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {
-                    gadget.map((gadgetItem, index) => 
-                    <Gadget 
-                    key={gadgetItem.id || index} 
-                    gadget={gadgetItem}>
-                    </Gadget>)
+                    gadget.map((gadgetItem, index) =>
+                        <Gadget
+                            key={gadgetItem.id || index}
+                            gadget={gadgetItem}>
+                        </Gadget>)
                 }
             </div>
         </>

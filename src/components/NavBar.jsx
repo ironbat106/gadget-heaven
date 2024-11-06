@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGears } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
+
     const location = useLocation();
     const isHomePage = location.pathname === '/';
     const links =
@@ -42,6 +43,7 @@ const Navbar = () => {
                     Dashboard
                 </NavLink>
             </li>
+
             <li>
                 <NavLink
                     to='/support'
@@ -95,12 +97,14 @@ const Navbar = () => {
                     </div>
 
                 </div>
+
                 <Link to="/" className="btn btn-ghost text-2xl border-0 focus:outline-none hover:bg-transparent">
                     <span className={isHomePage ? "text-white" : "text-black"}>
                         <FontAwesomeIcon icon={faGears} /> <span></span>
                         Gadget Heaven
                     </span>
                 </Link>
+
             </div>
 
             <div className="navbar-center hidden lg:flex">
@@ -139,13 +143,16 @@ const Navbar = () => {
                 </div>
 
                 <button className="btn btn-ghost btn-circle bg-white mb-2 ml-2">
+
                     <Link to="/dashboard">
                         <div className="indicator">
                             <FaRegHeart className="text-xl" />
                             <span className="badge badge-sm  badge-white indicator-item">{wishProducts.length}</span>
                         </div>
                     </Link>
+                    
                 </button>
+
             </div>
         </div>);
 };

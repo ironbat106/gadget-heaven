@@ -8,6 +8,7 @@ const Footer = () => {
             </div>
 
             <div className="footer p-10 md:flex justify-center text-center md:gap-36">
+
                 <nav className="flex flex-col items-center">
                     <h6 className="footer-title text-black">Services</h6>
                     <a className="link link-hover text-gray-500">Products Supports</a>
@@ -21,7 +22,7 @@ const Footer = () => {
                     <a className="link link-hover text-gray-500">About us</a>
                     <a className="link link-hover text-gray-500">Career</a>
                     <a className="link link-hover text-gray-500">Contact</a>
-                    
+
                 </nav>
 
                 <nav className="flex flex-col items-center">
@@ -30,6 +31,7 @@ const Footer = () => {
                     <a className="link link-hover text-gray-500">Privacy policy</a>
                     <a className="link link-hover text-gray-500 ">Cookie policy</a>
                 </nav>
+                
             </div>
         </footer>
     );

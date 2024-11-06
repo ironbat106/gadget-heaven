@@ -1,9 +1,9 @@
 import { toast } from "react-toastify";
 
 const getStoredCart = () => {
-    const datastoring = localStorage.getItem('cart')
-    if (datastoring) {
-        const storedCart = JSON.parse(datastoring)
+    const storedData = localStorage.getItem('cart')
+    if (storedData) {
+        const storedCart = JSON.parse(storedData)
         return storedCart;
     }
     else {
@@ -50,10 +50,10 @@ const removeAllCart = () => {
 }
 
 const getStoredWish = () => {
-    const storedWishdata = localStorage.getItem('wish')
-    if (storedWishdata) {
-        const storedwish = JSON.parse(storedWishdata)
-        return storedwish;
+    const storedWishData = localStorage.getItem('wish')
+    if (storedWishData) {
+        const storedWish = JSON.parse(storedWishData)
+        return storedWish;
 
     }
     else {

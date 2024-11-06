@@ -24,6 +24,7 @@ const Cart = ({ cart, handleRemoveCart }) => {
                 <div onClick={() => handleRemoveCart(product_id)} className='px-8'>
                     <button className='text-2xl btn'><MdDeleteOutline /></button>
                 </div>
+                
             </div>
         </div>
     );

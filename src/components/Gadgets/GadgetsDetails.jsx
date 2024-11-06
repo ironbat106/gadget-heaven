@@ -21,6 +21,7 @@ const GadgetsDetails = () => {
             setWished(true)
         }
     }, [data, id])
+
     console.log(products);
 
     const { product_image, product_title, product_id, price, availability, description, Specification = [], rating } = products;
@@ -54,7 +55,7 @@ const GadgetsDetails = () => {
                             <div>
                                 <h2 className="font-bold text-xl">Specification: </h2>
                                 {
-                                    Specification.map((specif, idx) => <p key={idx}>{specif}</p>)
+                                    Specification.map((specif, index) => <p key={index}>{specif}</p>)
                                 }
                             </div>
 
@@ -77,7 +78,9 @@ const GadgetsDetails = () => {
 
                                 <h1>{rating}</h1>
                             </div>
+
                             <div className="flex items-center gap-4">
+                                
                                 <button onClick={() => handleCart(products)} className="btn bg-purple-700 w-44 rounded-3xl text-white font-bold">Add To Cart<svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 text-white"

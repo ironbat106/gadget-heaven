@@ -2,6 +2,7 @@ import React from 'react';
 import Wish from './Wish';
 
 const Wishes = ({ wishProduct, handleRemoveWish }) => {
+    
     return (
         <div className='py-5'>
             {

@@ -6,8 +6,7 @@ const DashboardDetails = ({ products }) => {
         <div className="card bg-base-100 shadow-xl">
 
             <figure className="w-4/5 mx-auto">
-                <img className=""
-                    src={product_image} />
+                <img src={product_image} />
             </figure>
 
             <div className="card-body">
