@@ -123,7 +123,7 @@ const Dashboard = () => {
 
                 <div className='flex flex-col md:flex-row items-center gap-4'>
 
-                    <p className='font-bold'>Total Cost: {`${isActive ? priceCart : wishPrice}`}K</p>
+                    <p className='font-bold'>Total Cost: ${`${isActive ? priceCart : wishPrice}`}</p>
 
                     <button onClick={() => handleSortBYPrice()}
                         className='btn btn-outline text-purple-700 rounded-3xl'>
@@ -163,7 +163,7 @@ const Dashboard = () => {
 
                     <p className="py-4 text-2xl font-bold">Payment Successful!</p>
                     <p>Thanks for Purchasing</p>
-                    <p>Total: {`${isActive ? priceCart : wishPrice}`}K</p>
+                    <p>Total: ${`${isActive ? priceCart : wishPrice}`}</p>
 
                     <div>
                         <form method="dialog ">

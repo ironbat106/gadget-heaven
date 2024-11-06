@@ -17,7 +17,7 @@ const Wish = ({ wish, handleRemoveWish }) => {
                 <div>
                     <h2 className="card-title">{product_title}</h2>
                     <p>{description}</p>
-                    <p>Price: {price}K</p>
+                    <p>Price: ${price}</p>
                 </div>
 
                 <div
