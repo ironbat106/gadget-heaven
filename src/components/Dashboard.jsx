@@ -59,12 +59,12 @@ const Dashboard = () => {
     const handleSortBYPrice = () => {
         if (isActive) {
 
-            const sortProduct = [...cartProducts].sort((a, b) => a.price - b.price)
+            const sortProduct = [...cartProducts].sort((a, b) => b.price - a.price)
             setProduct(sortProduct)
         }
         else {
 
-            const sortWishProduct = [...wishProduct].sort((a, b) => a.price - b.price)
+            const sortWishProduct = [...wishProduct].sort((a, b) => b.price - a.price)
             setWishProduct(sortWishProduct)
         }
     }
@@ -104,7 +104,7 @@ const Dashboard = () => {
 
                             <button onClick={() => handleTogging(false)}
                                 className={`${isActive ? "btn btn-xl bg-purple-700 px-10 rounded-3xl " : "text-purple-700 px-10 rounded-3xl bg-white btn btn-xl btn-outline font-extrabold"}`}>
-                                Wish</button>
+                                Wish List</button>
                         </div>
                     </div>
                 </div>
@@ -124,8 +124,10 @@ const Dashboard = () => {
                         Sort by price
                     </button>
 
-                    <button onClick={openModal}
-                        className='btn bg-purple-700 text-white rounded-3xl px-6'>
+                    <button
+                        onClick={openModal}
+                        disabled = {cartProducts.length === 0}
+                        className={`btn bg-purple-700 text-white rounded-3xl px-6 ${cartProducts.length === 0 ? 'bg-gray-200 text-gray-600 cursor-not-allowed' : 'bg-purple-700 text-white'}`}>
                         Purchase
                     </button>
                 </div>

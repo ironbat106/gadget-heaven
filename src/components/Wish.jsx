@@ -5,14 +5,14 @@ const Wish = ({ wish, handleRemoveWish }) => {
     const { product_title, product_image, price, product_id, description } = wish
 
     return (
-        <div className=" w-4/5 border-2 mb-3 mx-auto bg-base-100 shadow-xl flex gap-8 rounded-[24px]">
+        <div className="w-4/5 border-2 mb-3 mx-auto bg-base-100 shadow-xl flex flex-col md:flex-row gap-8 rounded-[24px]">
 
-            <figure className=" ">
+            <figure>
                 <img className="w-52"
                     src={product_image} />
             </figure>
 
-            <div className="flex justify-between items-center w-full">
+            <div className="flex w-full justify-between items-center">
 
                 <div>
                     <h2 className="card-title">{product_title}</h2>

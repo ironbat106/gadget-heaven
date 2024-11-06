@@ -13,6 +13,7 @@ const Support = () => {
                         </p>
 
                     </div>
+
                     <div>
                         <div>
                             <h2 className="text-4xl font-bold">Our Fast Responses!</h2>
@@ -57,7 +58,11 @@ const Support = () => {
                             <div className="chat-bubble chat-bubble-info">That sounds perfect. What’s the price? I’d like to add it to my cart.</div>
                         </div>
                     </div>
-    
+                    <br />
+                    <div>
+                        <button className="btn bg-white rounded-3xl text-purple-700 font-bold mb-10">Contact Now!</button>
+                    </div>
+
                 </div>
 
             </div>

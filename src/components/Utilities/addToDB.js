@@ -19,7 +19,7 @@ const addCart = (gadget) => {
     const isExist = cart.find(item => item.product_id === gadget.product_id)
     if (isExist) {
         toast.error('Already Added to Cart!', {
-            position: "top-right",
+            position: "top-center",
             autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -31,7 +31,7 @@ const addCart = (gadget) => {
         cart.push(gadget)
         localStorage.setItem('cart', JSON.stringify(cart))
         toast.success('Added successfully', {
-            position: "top-right",
+            position: "top-center",
             autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -69,7 +69,7 @@ const addWish = (gadget) => {
     const isExist = wish.find(item => item.product_id === gadget.product_id)
     if (isExist) {
         toast.error('Already Added to Wish', {
-            position: "top-right",
+            position: "top-center",
             autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -80,7 +80,7 @@ const addWish = (gadget) => {
         wish.push(gadget)
         localStorage.setItem('wish', JSON.stringify(wish))
         toast.success('Added successful', {
-            position: "top-right",
+            position: "top-center",
             autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
