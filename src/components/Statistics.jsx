@@ -1,7 +1,11 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
 
 const Statistics = () => {
+
+    useEffect(() => {
+        document.title = 'Statistics - Gadget Heaven';
+    },[]);
+
     return (
         <div>
             <div className="hero bg-purple-700 pb-20 text-white">

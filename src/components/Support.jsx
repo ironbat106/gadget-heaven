@@ -1,4 +1,11 @@
+import { useEffect } from 'react';
+
 const Support = () => {
+
+    useEffect(() => {
+        document.title = 'Support - Gadget Heaven';
+    },[]);
+
     return (
         <div>
             <div className="hero bg-purple-700 pb-20 text-white">

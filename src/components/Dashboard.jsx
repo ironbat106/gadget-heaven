@@ -7,6 +7,10 @@ import paymentLogo from '../assets/assets/Group.png';
 
 const Dashboard = () => {
 
+    useEffect(() => {
+        document.title = 'Dashboard - Gadget Heaven';
+    },[]);
+
     const [cartProducts, setProduct] = useState([])
     useEffect(() => {
         const gadgets = getStoredCart()
