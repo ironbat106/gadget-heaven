@@ -3,7 +3,7 @@
 Welcome to **Gadget Heaven** – your one-stop-shop for all things electronics! Our website features a curated selection of laptops, phones, MacBooks, accessories, and more, all designed to give you the best experience.
 
 ## Live Website Link
-Explore the live site here: (aryans-gadget-heaven.surge.sh)
+Explore the live site here: ([aryans-gadget-heaven.surge.sh](https://aryans-gadget-heaven.surge.sh/))
 
 ## Requirement Document
 Find the full requirements and specifications here: (https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf)
