@@ -30,7 +30,7 @@ const addCart = (gadget) => {
 
         cart.push(gadget)
         localStorage.setItem('cart', JSON.stringify(cart))
-        toast.success('Added successfully', {
+        toast.success('Added to cart successfully', {
             position: "top-center",
             autoClose: 1000,
             hideProgressBar: false,
@@ -79,7 +79,7 @@ const addWish = (gadget) => {
     else {
         wish.push(gadget)
         localStorage.setItem('wish', JSON.stringify(wish))
-        toast.success('Added successful', {
+        toast.success('Added to wishlist successfully', {
             position: "top-center",
             autoClose: 1000,
             hideProgressBar: false,
