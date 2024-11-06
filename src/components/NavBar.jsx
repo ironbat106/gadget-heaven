@@ -2,17 +2,21 @@ import { NavLink, useLocation, Link } from "react-router-dom";
 import { getStoredCart, getStoredWish } from "./Utilities/addToDB";
 import { useEffect, useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGears } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const location = useLocation();
+    const isHomePage = location.pathname === '/';
     const links =
         <>
             <li>
                 <NavLink
                     to='/'
                     className={({ isActive }) =>
-                        isActive ?
-                            'bg-purple-700 text-white focus:outline-none hover:bg-transparent' : 'text-gray-800 focus:outline-none hover:bg-transparent'}>
+                        isActive
+                            ?
+                            'bg-purple-700 text-white font-semibold focus:outline-none hover:bg-transparent underline' : 'text-gray-800 font-semibold focus:outline-none hover:bg-transparent'}>
                     Home
                 </NavLink>
             </li>
@@ -21,8 +25,9 @@ const Navbar = () => {
                 <NavLink
                     to='/statistics'
                     className={({ isActive }) =>
-                        isActive ?
-                            'bg-white text-purple-700 focus:outline-none hover:bg-transparent' : 'text-gray-800 focus:outline-none hover:bg-transparent'}>
+                        isActive
+                            ?
+                            'bg-white text-purple-700 font-semibold focus:outline-none hover:bg-transparent underline' : 'text-gray-800 font-semibold focus:outline-none hover:bg-transparent'}>
                     Statistics
                 </NavLink>
             </li>
@@ -31,7 +36,9 @@ const Navbar = () => {
                 <NavLink
                     to='/dashboard'
                     className={({ isActive }) =>
-                        isActive ? 'bg-white text-purple-700 focus:outline-none hover:bg-transparent' : 'text-gray-800 focus:outline-none hover:bg-transparent'}>
+                        isActive
+                            ?
+                            'bg-white text-purple-700 font-semibold focus:outline-none hover:bg-transparent underline' : 'text-gray-800 font-semibold focus:outline-none hover:bg-transparent'}>
                     Dashboard
                 </NavLink>
             </li>
@@ -39,7 +46,9 @@ const Navbar = () => {
                 <NavLink
                     to='/support'
                     className={({ isActive }) =>
-                        isActive ? 'bg-white text-purple-700 focus:outline-none hover:bg-transparent' : 'text-gray-800 focus:outline-none hover:bg-transparent'}>
+                        isActive
+                            ?
+                            'bg-white text-purple-700 font-semibold focus:outline-none hover:bg-transparent underline' : 'text-gray-800 font-semibold focus:outline-none hover:bg-transparent'}>
                     Support
                 </NavLink>
             </li>
@@ -68,9 +77,9 @@ const Navbar = () => {
     return (
         <div className={`navbar w-11/12 mx-auto mt-4  ${homeRoute ? 'bg-purple-700 rounded-t-[24px]' : 'bg-white'}`}>
             <div className="navbar-start">
-                <div className="dropdown">
+                <div>
 
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden border-1">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -85,15 +94,12 @@ const Navbar = () => {
                         </svg>
                     </div>
 
-                    <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        {links}
-                    </ul>
-
                 </div>
                 <Link to="/" className="btn btn-ghost text-2xl border-0 focus:outline-none hover:bg-transparent">
-                    Gadget Heaven
+                    <span className={isHomePage ? "text-white" : "text-black"}>
+                        <FontAwesomeIcon icon={faGears} /> <span></span>
+                        Gadget Heaven
+                    </span>
                 </Link>
             </div>
 
@@ -106,8 +112,8 @@ const Navbar = () => {
             <div className="navbar-end">
 
                 <div className="flex-none">
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                    <div>
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-white mb-2">
                             <Link to="/dashboard">
                                 <div className="indicator">
 
@@ -132,7 +138,7 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <button className="btn btn-ghost btn-circle">
+                <button className="btn btn-ghost btn-circle bg-white mb-2 ml-2">
                     <Link to="/dashboard">
                         <div className="indicator">
                             <FaRegHeart className="text-xl" />
